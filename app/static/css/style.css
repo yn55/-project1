@@ -1,3 +1,13 @@
 body {
-font-size: 200%;
+    font-family: Helvetica, "Helvetica Neue", sans-serif;
+}
+
+.green {
+        color: green;
+}
+.CenterGothic {
+    font-family: "Century Gothic", Century Gothic, Apple Gothic, sans-serif;
+}
+.makeBigger {
+    font-size: 120%;
 }
