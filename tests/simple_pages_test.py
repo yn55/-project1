@@ -40,11 +40,11 @@ def test_request_python_flask(client):
     assert response.status_code == 200
     assert b"Python and Flask" in response.data
 
-def test_request_page4(client):
+def test_request_contid(client):
     """This makes the index page"""
     response = client.get("/contid")
     assert response.status_code == 200
-    assert b"Continuous Integration and Development" in response.data
+    assert b"Continuous Integration and Deployment" in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""
