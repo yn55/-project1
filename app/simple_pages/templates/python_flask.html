@@ -1,99 +1,149 @@
 {% extends "base.html" %}
 {% block content %}
     Python and Flask
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+              crossorigin="anonymous">
 
-    {% block head %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>This is {{ name }} Website</title>
-    {% endblock %}
+            <title>This is {{ 'Yoshis' }} Website</title>
+        {% endblock %}
+        <style>
+            {
+                box-sizing: border-box
+            ;
+            }
+            /* Set additional styling options for the columns*/
+            .column {
+                float: left;
+                width: 50%;
+            }
 
-</head>
-<body>
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="row">
+        <div class="column" style="background-color:#FFB695;">
+            <h2>Python and Flask Explanations</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Quisque id diam vel quam elementum. Vulputate sapien nec sagittis aliquam. Tempus
-                imperdiet nulla malesuada pellentesque elit eget. Phasellus egestas tellus rutrum tellus pellentesque eu
-                tincidunt. Ut lectus arcu bibendum at varius vel pharetra. Rutrum quisque non tellus orci. Gravida cum
-                sociis natoque penatibus et magnis dis parturient. Vitae ultricies leo integer malesuada nunc vel risus
-                commodo. Ac feugiat sed lectus vestibulum mattis. Dictum sit amet justo donec enim diam. Suspendisse
-                faucibus interdum posuere lorem ipsum dolor. Lacus luctus accumsan tortor posuere ac ut consequat
-                semper. Sed felis eget velit aliquet sagittis id. Accumsan in nisl nisi scelerisque eu ultrices vitae
-                auctor eu.
+                Branch
             </p>
             <p>
-                Amet porttitor eget dolor morbi non arcu risus quis. Ac tortor dignissim convallis aenean et tortor at
-                risus. Amet facilisis magna etiam tempor orci eu lobortis elementum. Elit sed vulputate mi sit amet.
-                Tellus in metus vulputate eu. Libero justo laoreet sit amet cursus sit amet dictum sit. Leo vel orci
-                porta non pulvinar neque laoreet suspendisse interdum. Cursus sit amet dictum sit amet justo donec enim
-                diam. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Varius morbi enim nunc faucibus a
-                pellentesque sit amet. Mauris vitae ultricies leo integer malesuada nunc. Enim neque volutpat ac
-                tincidunt vitae semper. Ac auctor augue mauris augue neque gravida in fermentum et. Etiam erat velit
-                scelerisque in dictum non consectetur a. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Nam
-                at lectus urna duis convallis convallis. Tellus integer feugiat scelerisque varius morbi enim nunc
-                faucibus a.
+                A Git branch lists the user's project branches. The branch that is highlighted designates the branch
+                that is currently in use. A user can type and develop code on a branch. This is a great way for users to
+                make
+                edits in a code program without damaging the finished project. It is generally advised for users not to
+                work on
+                the master branch (main branch). It is advised to work on a new branch and merge to the master once
+                everything
+                is confirmed as working.
             </p>
             <p>
-                Vestibulum morbi blandit cursus risus at. Scelerisque purus semper eget duis. Neque sodales ut etiam sit
-                amet nisl purus in. Nunc sed velit dignissim sodales. Mattis pellentesque id nibh tortor id. Posuere
-                urna nec tincidunt praesent semper feugiat nibh sed. Tristique magna sit amet purus gravida quis blandit
-                turpis. Nisl tincidunt eget nullam non nisi est sit. A iaculis at erat pellentesque adipiscing commodo
-                elit. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Justo eget magna fermentum iaculis
-                eu non diam phasellus. Volutpat ac tincidunt vitae semper. Aenean vel elit scelerisque mauris
-                pellentesque pulvinar pellentesque habitant. Nulla aliquet enim tortor at auctor urna. Lectus mauris
-                ultrices eros in cursus turpis massa tincidunt dui. Massa massa ultricies mi quis hendrerit dolor magna.
-                Velit dignissim sodales ut eu sem. Eget egestas purus viverra accumsan in. Elementum curabitur vitae
-                nunc sed.
+                Document Explanations
             </p>
             <p>
-                Purus in massa tempor nec feugiat nisl pretium fusce. Nulla facilisi cras fermentum odio eu feugiat.
-                Tellus integer feugiat scelerisque varius morbi. Vivamus at augue eget arcu dictum. At auctor urna nunc
-                id cursus. Eu augue ut lectus arcu bibendum at. Scelerisque purus semper eget duis at tellus at urna
-                condimentum. In hac habitasse platea dictumst quisque sagittis purus sit. Feugiat nisl pretium fusce id
-                velit ut tortor pretium viverra. Pretium fusce id velit ut tortor pretium viverra suspendisse. Dui
-                vivamus arcu felis bibendum ut. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Ligula
-                ullamcorper malesuada proin libero nunc consequat interdum varius sit. Congue nisi vitae suscipit
-                tellus. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Tortor pretium viverra
-                suspendisse potenti nullam ac tortor. Feugiat in fermentum posuere urna nec tincidunt praesent. Lobortis
-                scelerisque fermentum dui faucibus in. Nec feugiat in fermentum posuere urna nec.
+                docker-compose.yml: Orchestration file that contains the configuration to develop locally, it
+                overrides the Dockerfile to run the flask development server instead of running the gunicorn server that
+                is used for hosting on Heroku
+                <br>Dockerfile <-File used to create an image to run in a container that runs the program
+                <br>App -> Simple_pages -> templates: Shows each HTML file with contents of each page. Pages include:
+                <br>About<br>Git<br>Docker<br>Python and Flask<br>Continuous Integration and Deployment
+                <br>App - static - css - style.css: Code for the aesthetics of the website such as font.
+                <br>App - static - images: shows the pictures in the website
+                <br>App - static - templates - base.html: Shows the background code such as bootstrap to set up the
+                frame work of the website.
+                <br>tests - simple_pages_test.py: shows the tests run to confirm that each page is working.
+                <br>Heroku.yml: Connects docker file to the web
+                <br>.github - workflows: Contains two workflow files, dev.yml and prod.yml. These documents are used to commit and push code into a dummy app and in to a final finished product app with Heroku.
             </p>
             <p>
-                Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing. Vel
-                fringilla est ullamcorper eget nulla facilisi. Sagittis id consectetur purus ut faucibus pulvinar
-                elementum. Et malesuada fames ac turpis egestas maecenas. Id aliquet lectus proin nibh nisl condimentum
-                id. Vel turpis nunc eget lorem dolor sed. Mattis pellentesque id nibh tortor. Suspendisse in est ante in
-                nibh mauris cursus. Sapien faucibus et molestie ac feugiat sed. Amet luctus venenatis lectus magna.
-                Curabitur vitae nunc sed velit dignissim. Molestie a iaculis at erat pellentesque adipiscing commodo
-                elit at. Amet massa vitae tortor condimentum lacinia quis.
+                Github Link
+            </p>
+            <p>
+                This is the GitHub Link for this website: <br>https://github.com/yn55/-project1.git
+            </p>
+            <p>
+                Pytest
+            </p>
+            <p>
+                Pytest allows a coder to run a test on their own code to make sure their code works. In this website,
+                the following code was used to test the website. The below code test to check if the home page is
+                working. If the test reads Home in the home page, the test will pass.
+                <br>def test_request_index(client):
+                <br>"""This makes the index page"""
+                <br>response = client.get("/")
+                <br>assert response.status_code == 200
+                <br>assert b"Home" in response.data
+            </p>
+        </div>
+        <div class="column" style="background-color:#96D1CD;">
+            <h2>Pictures!</h2>
+            <p>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/python_flask_logo.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            </p>
+            <p>
+                .
+            </p>
+            <p>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/python_flask_logo.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            </p>
+            <p>
+                .
+            </p>
+            <p>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/python_flask_logo.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
             </p>
         </div>
 
     </div>
 
-</div>
+    </div>
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
--->
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
-</body>
-</html>
+    </body>
+    </html>
 
 {% endblock %}
