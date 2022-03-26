@@ -30,7 +30,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/about">About</a>
+                                <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/git">Git</a>
@@ -43,6 +43,18 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/contid">Continuous Integration and Deployment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/glossaryoop">OOP Glossary</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aaa">AAA Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/oopfundamentals">OOP Fundamentals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/solid">SOLID</a>
                             </li>
                         </ul>
                     </div>
@@ -60,12 +72,13 @@
     </footer>
 
 </div>
- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
-    $(function(){
-        $('a').each(function(){
+    $(function () {
+        $('a').each(function () {
             if ($(this).prop('href') === window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
+                $(this).addClass('active');
+                $(this).parents('li').addClass('active');
             }
         });
     });
