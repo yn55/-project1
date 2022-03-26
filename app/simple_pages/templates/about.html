@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    About Page
+
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+            <title>This is {{ 'Yoshis' }} Website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <p>
+        Welcome to this web page. My name is Yoshi and I am an senior MBA student. In this website you will receieve a
+        summary of the basics of Web Development.
+    </p>
+
+    </body>
+    </html>
+
+{% endblock %}

@@ -1,5 +1,7 @@
+"""These are reusable template function"""
 from os import getenv
 import datetime
+
 
 def utility_text_processors():
     message = "hello world"
@@ -21,6 +23,4 @@ def utility_text_processors():
         deployment_environment=deployment_environment(),
         year=current_year(),
         format_price=format_price
-    )
-
-
+                )

@@ -4,7 +4,7 @@ def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b'<a class="nav-link" href="/about!">About</a>' in response.data
+    assert b'<a class="nav-link" href="/about">About</a>' in response.data
     assert b'<a class="nav-link" href="/git">Git</a>' in response.data
     assert b'<a class="nav-link" href="/docker">Docker</a>' in response.data
     assert b'<a class="nav-link" href="/python_flask">Python and Flask</a>' in response.data
@@ -18,7 +18,7 @@ def test_request_index(client):
 
 def test_request_about(client):
     """This makes the index page"""
-    response = client.get("/about!")
+    response = client.get("/about")
     assert response.status_code == 200
     assert b"About Page" in response.data
 
