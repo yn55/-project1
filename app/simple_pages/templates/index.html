@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    Home
+    <H1>Home</H1>
 
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
@@ -10,7 +10,7 @@
 
     </head>
     <body>
-        <p>
+    <p>
         Welcome to this web page. My name is Yoshi and I am an senior MBA student. In this website you will receieve a
         summary of the basics of Web Development.
     </p>
@@ -34,6 +34,22 @@
                         <img src="{{ url_for('static', filename='images/github_banner.png') }}"
                              class="d-block w-100" alt="..."/>
                     </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/oop.jpeg') }}"
+                             class="d-block w-100" alt="..."/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/aaa.png') }}"
+                             class="d-block w-100" alt="..."/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/oopfund.png') }}"
+                             class="d-block w-100" alt="..."/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/solidpic.jpeg') }}"
+                             class="d-block w-100" alt="..."/>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -47,13 +63,14 @@
                 </button>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ url_for('static', filename='images/git_logo.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Git</h5>
-                        <p class="card-text">Overview of what Git is and how it is used in coding.</p>
+                        <h5 class="card-title">Git </h5>
+                        <p class="card-text">Overview of what Git is and how it is used in coding. <br></p>
                         <a href="/git" class="btn btn-primary">Click here :)</a>
                     </div>
                 </div>
@@ -68,6 +85,7 @@
                         <a href="/docker" class="btn btn-primary">Click here :)</a>
                     </div>
                 </div>
+
             </div>
             <div class="col">
                 <div class="card" style="width: 18rem;">
@@ -85,10 +103,55 @@
                     <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
                          alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Continuous Integration & Deployment</h5>
-                        <p class="card-text">Overview of how Github enables coders to perform continuous integration and
+                        <h5 class="card-title">Github</h5>
+                        <p class="card-text">How Github enables continuous integration and
                             deployment</p>
                         <a href="/contid" class="btn btn-primary">Click here :)</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oop.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">OOP Glossary</h5>
+                        <p class="card-text">Provides a glossary OOP terms with definitions</p>
+                        <a href="/glossaryoop" class="btn btn-primary">Click here :)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">AAA Testing</h5>
+                        <p class="card-text">Concepts of Unit Testing Fundamentals</p>
+                        <a href="/aaa" class="btn btn-primary">Click here :)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oopfund.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">OOP Fundamentals</h5>
+                        <p class="card-text">Concepts of Object-Oriented Fundamentals</p>
+                        <a href="/aaa" class="btn btn-primary">Click here :)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/solidpic.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SOLID</h5>
+                        <p class="card-text">5 Principles of Object-Oriented Programming</p>
+                        <a href="/solid" class="btn btn-primary">Click here :)</a>
                     </div>
                 </div>
             </div>
