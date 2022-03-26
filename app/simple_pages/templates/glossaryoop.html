@@ -1,47 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
-        {% block head %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-            <title>This is {{ 'Yoshis' }} Website</title>
-        {% endblock %}
-        <style>
-            {
-                box-sizing: border-box
-            ;
-            }
-            /* Set additional styling options for the columns*/
-            .column {
-                float: left;
-                width: 50%;
-            }
+        <title>This is {{ 'Yoshis' }} Website</title>
+    {% endblock %}
+    <style>
+        {
+            box-sizing: border-box
+        ;
+        }
+        /* Set additional styling options for the columns*/
+        .column {
+            float: left;
+            width: 50%;
+        }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        </style>
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
     </head>
     <body>
     <div class="row">
         <div class="column" style="background-color:#FFB695;">
             <h2>Object Oriented Programming Glossary</h2>
             <p>
-                Summary
+            <h3>Terms & Definitions</h3>
             </p>
             <p>
-                This project has GitHub actions integrated into the code. There are two github work flows that are set
-                up in the project:
-                <br>dev.yml
-                <br>prod.yml
-                <br>When writing code on a branch, a user can commit and push their code into a github repository. The
-                Github repository will receive a pull request. The user must accept the pull request in Github. There
-                will be a test that runs to check if everything is correct. Once it the code is validated and confirmed
-                as correct, the pull request will be completed. Simultaneously, the code will be deployed into a Heroku
-                dummy app for testing. The user can then merge the pull request into the main branch if they wish. Once
-                the request is merged, the user can rebase the code onto the main branch in their local coding software.
-                Simultaneously, the code will be deployed into the final product application in Heroku.
+                <b>Object:</b> In object-oriented programming, an object can be considered an instance of a particular
+                class. Furthermore, an object consists of a state and a behavior. A state can be considered the
+                adjective-type attribute of an object. For example, a dog has a name(State 1) and a color(State 2). A
+                behavior can be considered the verb-type attribute of an object. For example, a dog can bark(Behavior 1)
+                and can fetch(Behavior 2). You can refer to the following link for further information:
+                https://docs.oracle.com/javase/tutorial/java/concepts/object.html
+                <br><br><b>Instantiation:</b>Creation of an object. You can refer to the following link for further
+                information: https://www.techopedia.com/definition/26857/instantiate
+                <br><br><b>Class:</b> A class is a blueprint for creating objects. They can provide initial values for a
+                state (considered member variables or attributes). They can provide implementations of behaviors
+                (considered member functions or methods). A class is a way of organizing information about a type of
+                data so a programmer can reuse elements when making multiple instances of that data type. It is an
+                example of encapsulation which will be discussed in further detail later. You can refer
+                to the following link for further information: https://brilliant.org/wiki/classes-oop/
+                <br><br><b>Namespace:</b> Creates a name for objects of various kinds. It allows for objects to have
+                unique names for proper identification. You can refer to the following link for further information:
+                https://en.cppreference.com/w/cpp/language/namespace
+                <br><br><b>Constructor:</b> A method of a class or structure that initializes the creation of an object.
+                The constructor is called automatically when an object is created. It can be used to se the values of
+                the members of an object. You can refer to the following link for further information:
+                https://www.techopedia.com/definition/5656/constructor
+                <br>
             </p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
@@ -49,7 +60,8 @@
             <p>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
@@ -61,7 +73,8 @@
             <p>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
@@ -73,7 +86,8 @@
             <p>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
