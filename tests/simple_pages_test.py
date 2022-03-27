@@ -1,5 +1,6 @@
 """This test the homepage"""
 
+
 def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
@@ -15,11 +16,13 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/oopfundamentals">OOP Fundamentals</a>' in response.data
     assert b'<a class="nav-link" href="/solid">SOLID</a>' in response.data
 
+
 def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
     assert b"Home" in response.data
+
 
 def test_request_git(client):
     """This makes the index page"""
@@ -27,11 +30,13 @@ def test_request_git(client):
     assert response.status_code == 200
     assert b"Git" in response.data
 
+
 def test_request_docker(client):
     """This makes the index page"""
     response = client.get("/docker")
     assert response.status_code == 200
     assert b"Docker" in response.data
+
 
 def test_request_python_flask(client):
     """This makes the index page"""
@@ -39,11 +44,13 @@ def test_request_python_flask(client):
     assert response.status_code == 200
     assert b"Python and Flask" in response.data
 
+
 def test_request_contid(client):
     """This makes the index page"""
     response = client.get("/contid")
     assert response.status_code == 200
     assert b"Continuous Integration and Deployment" in response.data
+
 
 def test_request_glossaryoop(client):
     """This makes the index page"""
@@ -51,11 +58,13 @@ def test_request_glossaryoop(client):
     assert response.status_code == 200
     assert b"Object Oriented Programming Glossary" in response.data
 
+
 def test_request_aaa(client):
     """This makes the index page"""
-    response = client.get("/AAA")
+    response = client.get("/aaa")
     assert response.status_code == 200
     assert b"Arrange-Act-Assert" in response.data
+
 
 def test_request_oopfundamentals(client):
     """This makes the index page"""
@@ -63,11 +72,13 @@ def test_request_oopfundamentals(client):
     assert response.status_code == 200
     assert b"Object Oriented Programming Fundamentals" in response.data
 
+
 def test_request_solid(client):
     """This makes the index page"""
     response = client.get("/solid")
     assert response.status_code == 200
     assert b"5 Principles of Object-Oriented Programming" in response.data
+
 
 def test_request_page_not_found(client):
     """This makes the index page"""
