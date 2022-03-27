@@ -4,14 +4,15 @@ import datetime
 
 
 def utility_text_processors():
+    """Used to define environment, current date & time, """
     message = "hello world"
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
 
     def current_year():
-        currentDateTime = datetime.datetime.now()
-        date = currentDateTime.date()
+        current_date_time = datetime.datetime.now()
+        date = current_date_time.date()
         year = date.strftime("%Y")
         return year
 
