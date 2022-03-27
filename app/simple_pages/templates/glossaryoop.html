@@ -52,51 +52,239 @@
                 The constructor is called automatically when an object is created. It can be used to se the values of
                 the members of an object. You can refer to the following link for further information:
                 https://www.techopedia.com/definition/5656/constructor
-                <br>
+                <br><br><b>Fixture:</b> There are multiple types of fixtures. You can refer to the following link for
+                further information:
+                https://stackoverflow.com/questions/12071344/what-are-fixtures-in-programming#:~:text=1.,the%20fixture%20of%20the%20test.
+                <br> <b>-- Test Fixture:</b> A known state against which a test is running. It is a set or preconditions
+                or the
+                state needed to run a test.
+                <br> <b>-- Fixture:</b> A file containing sample data.
+                <br> <b>-- Software Test Fixture: </b> A process that sets up a required state.
+                <br><br><b>Type Hint:</b> Allows one to define the type of values that can be passed for each argument
+                of a function or method. You can refer to the following link for further information:
+                https://torquemag.io/2016/09/wordpress-developers-guide-type-hinting/
+                <br><br><b>Type Cast:</b> The process of converting the data type of the outcome of any operation to
+                another data type. You can refer to the following link for further information:
+                https://www.educba.com/what-is-type-casting/
+                <br><br><b>Unit Test:</b> Away of testing a unit which is the smallest piece of code that can be
+                logically isolated in a system. You can refer to the following link for further information:
+                https://smartbear.com/learn/automated-testing/what-is-unit-testing/
+                <br><br><b>Static:</b> Static is a storage class modifier. data members are shared by all instances of
+                the class and are stored in one place. A static variable is defined when the storage class of static is
+                made. You can refer to the following link for further information:
+                https://docs.mql4.com/basis/oop/staticmembers
+                <br><br><b>Instance Method:</b> Method that belongs to an instance of a class and not the class itself.
+                They belong to a particular object. You can refer to the following link for further information:
+                http://www.cs.ecu.edu/karl/3200/fall15/Notes/Java/Class/method.html
+                <br><br><b>Instance Property:</b> A typical property declared in a class. You will have a copy of the
+                property's value for each instance of the class. You can refer to the following link for further
+                information: https://csharp.2000things.com/2011/03/03/259-static-vs-instance-properties/
+                <br><br><b>Static Method:</b> A method that belongs to a class rather than an instance of a class. It is
+                part of the class definition. You can refer to the following link for further information:
+                https://www.techopedia.com/definition/24034/static-method-java#:~:text=Java%208%20Interfaces-,What%20Does%20Static%20Method%20Mean%3F,that%20object%20of%20a%20class.
+                <br><br><b>Static Property:</b> Property that has a single value for the entire class. You can refer to
+                the following link for further
+                information: https://csharp.2000things.com/2011/03/03/259-static-vs-instance-properties/
+                <br><br><b>Encapsulation:</b> Occurs when each object keeps its state private and inside a class.
+                Objects can manage their own state via methods. No other class can touch the state unless it is
+                explicitly allowed. Public methods can be called by classes but they cannot modify the internal state.
+                For example, you can feed a cat (public method called), but you cannot modify how hungry (state is
+                hunger) a cat is. In essence, binding a private state and public state creates encapsulation. It
+                prevents accidental modification of data. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/encapsulation-in-python/
+                <br><br><b>Inheritance:</b> Allows a programmer to reuse common logic and extract the unique logic into
+                a separate class. First, a parent class is create which is a class to easily hold all common functions
+                and parameters that will be used in a child class. A child class is a class that inherits all
+                of the attributes and functions assigned to the parent class. Each class adds only what is necessary for
+                it while reusing common logic with the parent class. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/inheritance-in-python/ The
+                benefits of inheritance are:
+                <br>-- Good real world representations
+                <br>-- Provides reusability of the code
+                <br>-- Transitive in nature
+                <br><br><b>Polymorphism:</b> Allows a programmer to use a collection of child classes and parent class
+                methods. A coder can use a method that is implemented for a parent class inside a child class.A coder
+                can use a class exactly like its parent so there is no confusion with mixing type. Each child class
+                keeps its own methods as they are. This is done by defining a parent interface that can be reused. The
+                parent interface has multiple common methods and each child class implements its own version of said
+                common method. In other words, the same function name (but different signatures) can be used for
+                different types. Polymorphism can be used in class methods, Inheritance, and with functions and objects.
+                You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/polymorphism-in-python/
+                <br><br><b>Abstraction:</b> Helps the maintenance of large programs that have many separate objects in
+                constant communication. Each object must only expose a high-level mechanism for using it. The mechanism
+                must hide internal implementation details and only reveal operations relevant for other objects. For
+                examples, a phone allows a user to click buttons for an output, but it does not demonstrate the process
+                of retrieving the output to the user. In terms of coding, a public method should be accessed by any
+                class. That class does not care or know how the method works. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/abstract-classes-in-python/
+                <br><br><b>SOLID:</b> SOLID are 5 design principles that encourage maintainable, understandable, and
+                flexible software. The 5 principle work well in conjunction with the 4 OOP fundamental concepts. You can
+                refer to
+                the following link for further information: https://www.baeldung.com/solid-principles
+                <br> <b>-- Single-Responsibility Principle:</b> A class should only have on responsibility and only one
+                reason to change. This allows for fewer test cases, fewer dependencies and well-organized classes.
+                <br> <b>-- Open-Closed Principle:</b> A class should be open for extension but closed for modification.
+                Doing so will prevent programmers from modifying existing code and creating new bugs.
+                <br> <b>-- Liskov Substitution Principle:</b> Functions that use pointers or reference to base classes
+                must be able to use objects of derived classes without knowing it. In other words, derived classes must
+                be substitutable for their base class.
+                <br> <b>-- Interface Segregation Principle:</b> Larger interfaces should be split into smaller ones.
+                This ensures that anything a user interacts with belongs only that class.
+                <br> <b>-- Dependency Inversion Principle:</b> Abstractions should not depend on details. Details should
+                depend on abstraction. High-level modules should not depend on low-level modules. Both should depend on
+                abstractions.
+                <br><br><b>Design Patterns:</b> Design Patterns are essentially pre-made blueprints that a programmer
+                can customize to solve a design problem in code. They are concepts that can be implemented when
+                designing a program with code. There are three categories of design patterns, Creational patterns,
+                Structural patterns, and Behavioral patterns. You can refer to
+                the following link for further information: https://refactoring.guru/design-patterns/catalog
+                <br> <b>-- Creational Patterns:</b> Provide various object creation mechanisms. Good for increasing
+                flexibility and reusing existing code. Examples include, factory method and abstract factory.
+                <br> <b>-- Structural Patterns: </b> Explains how to assemble objects and classes into larger structures
+                while keeping structures flexible and efficient. Examples include adapter and bridge.
+                <br> <b>-- Behavioral Patterns: </b> Patterns concerned with algorithms and the assignment of
+                responsibilities between objects. Examples include command and iterator.
             </p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Pictures!</h2>
-            <p>
+            <br></br>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                    <img src="{{ url_for('static', filename='images/oop.jpeg') }}" class="card-img-top"
                          alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br></br>
+            <br></br>
+
+
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                    <img src="{{ url_for('static', filename='images/aaa.png') }}" class="card-img-top"
                          alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br></br>
+            <br></br>
+
+
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top"
+                    <img src="{{ url_for('static', filename='images/oopfund.png') }}" class="card-img-top"
                          alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
+            <br></br>
+            <br></br>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/solidpic.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oop.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oopfund.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/solidpic.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oop.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/oopfund.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/solidpic.jpeg') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
     </body>
     </html>
 
