@@ -61,7 +61,7 @@ def test_request_glossaryoop(client):
 
 def test_request_aaa(client):
     """This makes the index page"""
-    response = client.get("/aaa")
+    response = client.get("/AAA")
     assert response.status_code == 200
     assert b"Arrange-Act-Assert" in response.data
 
