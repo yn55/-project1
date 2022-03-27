@@ -8,7 +8,8 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/git">Git</a>' in response.data
     assert b'<a class="nav-link" href="/docker">Docker</a>' in response.data
     assert b'<a class="nav-link" href="/python_flask">Python and Flask</a>' in response.data
-    assert b'<a class="nav-link" href="/contid">Continuous Integration and Deployment</a>' in response.data
+    assert b'<a class="nav-link" href="/contid">Continuous Integration and Deployment</a>' \
+           in response.data
     assert b'<a class="nav-link" href="/glossaryoop">OOP Glossary</a>' in response.data
     assert b'<a class="nav-link" href="/aaa">AAA Testing</a>' in response.data
     assert b'<a class="nav-link" href="/oopfundamentals">OOP Fundamentals</a>' in response.data
@@ -44,25 +45,25 @@ def test_request_contid(client):
     assert response.status_code == 200
     assert b"Continuous Integration and Deployment" in response.data
 
-def test_request_contid(client):
+def test_request_glossaryoop(client):
     """This makes the index page"""
     response = client.get("/glossaryoop")
     assert response.status_code == 200
     assert b"Object Oriented Programming Glossary" in response.data
 
-def test_request_contid(client):
+def test_request_aaa(client):
     """This makes the index page"""
     response = client.get("/AAA")
     assert response.status_code == 200
     assert b"Arrange-Act-Assert" in response.data
 
-def test_request_contid(client):
+def test_request_oopfundamentals(client):
     """This makes the index page"""
     response = client.get("/oopfundamentals")
     assert response.status_code == 200
     assert b"Object Oriented Programming Fundamentals" in response.data
 
-def test_request_contid(client):
+def test_request_solid(client):
     """This makes the index page"""
     response = client.get("/solid")
     assert response.status_code == 200
