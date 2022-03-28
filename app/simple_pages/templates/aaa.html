@@ -1,88 +1,173 @@
 {% extends "base.html" %}
 {% block content %}
-        {% block head %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-            <title>This is {{ 'Yoshis' }} Website</title>
-        {% endblock %}
-        <style>
-            {
-                box-sizing: border-box
-            ;
-            }
-            /* Set additional styling options for the columns*/
-            .column {
-                float: left;
-                width: 50%;
-            }
+        <title>This is {{ 'Yoshis' }} Website</title>
+    {% endblock %}
+    <style>
+        {
+            box-sizing: border-box
+        ;
+        }
+        /* Set additional styling options for the columns*/
+        .column {
+            float: left;
+            width: 50%;
+        }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        </style>
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
     </head>
     <body>
     <div class="row">
         <div class="column" style="background-color:#FFB695;">
             <h2>Arrange-Act-Assert</h2>
             <p>
-                Summary
+            <h3>Summary</h3>
             </p>
             <p>
-                This project has GitHub actions integrated into the code. There are two github work flows that are set
-                up in the project:
-                <br>dev.yml
-                <br>prod.yml
-                <br>When writing code on a branch, a user can commit and push their code into a github repository. The
-                Github repository will receive a pull request. The user must accept the pull request in Github. There
-                will be a test that runs to check if everything is correct. Once it the code is validated and confirmed
-                as correct, the pull request will be completed. Simultaneously, the code will be deployed into a Heroku
-                dummy app for testing. The user can then merge the pull request into the main branch if they wish. Once
-                the request is merged, the user can rebase the code onto the main branch in their local coding software.
-                Simultaneously, the code will be deployed into the final product application in Heroku.
+                Arrange, Act, and Assert is considered the pattern to be followed when writing a testing code. Testing
+                exercises a behavior to determine if the behavior functions correctly. It provides an empirical feedback
+                loop for development. It allows programmers to know when their code breaks. This prevents program
+                applications to be filled with bugs. Below is summary of each pattern:
+                <br> <b>-- Arrange:</b> Arrange sets up the test case. It arranges all inputs and targets For example,
+                this is where the objects are
+                created or where a database is prepped.
+                <br> <b>-- Act:</b> Act covers the main things to be tested. They act on the target behavior and elicit
+                some sort of response. For
+                example, this step could entail calling a function or method.
+                <br> <b>-- Assert: </b> Assert verifies the goodness or badness of the response elicited by the act
+                step. For example, assertions can check numeric or string values.
+            </p>
+            <p>
+            <h3>Calculator Example</h3>
+            </p>
+            <p>
+                In the following example, a calculator is created that has functions such as addition and subtraction.
+                It can also store the history of the calculations. This example will show how Arrange, Act, and Assert
+                is implemented in the testing of addition.
+                <br><br> <b>Arrange</b>
+                <br>A calculator folder is created with two subfolders named calculations and
+                operations. Each folder (Calculator, calculations and operations) has a python file in it.
+                <br>-- First, the calculator.operations python file creates an addition operation class as shown in
+                figure 1.
+                <br>-- Second, the calculator.calculations python file imports the data from the calculator.operations
+                folder
+                as shown in figure 2.
+                <br>-- Third, the calculator.calculations creates an abstract calculation base class which creates a
+                tuple list and stores all values from calculations made when using the calculator. This can be known as
+                the parent class. Figure 3 shows the code written for this step.
+                <br>-- Fourth, there is an addition child class that is created which inherits the parent class's
+                attributes. This child class is created since it is specifically for addition.
+                Figure 4 shows the addition child class.
+                <br>-- Fifth, the calculator class must be created in a python file under the calculator folder. The
+                calculator class imports the calculator.calculations folder and uses that information to create the
+                calculator class. Figure 5 shows this code.
+                <br><br> <b>Act</b>
+                <br> This step creates the class to test the code. A "tests" folder is created with a python file named
+                "calculator_test.py" The class is supposed to call the addition class
+                which tests the addition portion of the calculator. Figure 6 shows this code.
+                <br><br> <b>Assert</b>
+                <br> This step executes the addition test class in the act section and provides the user with a result
+                of the test. Figure 7 shows the results of the test class. This test passed.
             </p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Pictures!</h2>
-            <p>
+            <br>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <b>Figure 1</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/calculator_operations.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 2</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig2aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 3</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig3aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
+            <br>
+            <br>
+
+            <div class="col">
+                <br><b>Figure 4</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig4aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col">
+                <br><b>Figure 5</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig5aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="col">
+                <br><b>Figure 6</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig6aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="col">
+                <br><b>Figure 7</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig7aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br> <br> <br> <br>
+
+
         </div>
     </div>
-
-
     </body>
     </html>
 
