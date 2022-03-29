@@ -1,88 +1,193 @@
 {% extends "base.html" %}
 {% block content %}
-        {% block head %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-            <title>This is {{ 'Yoshis' }} Website</title>
-        {% endblock %}
-        <style>
-            {
-                box-sizing: border-box
-            ;
-            }
-            /* Set additional styling options for the columns*/
-            .column {
-                float: left;
-                width: 50%;
-            }
+        <title>This is {{ 'Yoshis' }} Website</title>
+    {% endblock %}
+    <style>
+        {
+            box-sizing: border-box
+        ;
+        }
+        /* Set additional styling options for the columns*/
+        .column {
+            float: left;
+            width: 50%;
+        }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        </style>
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
     </head>
     <body>
     <div class="row">
         <div class="column" style="background-color:#FFB695;">
-            <h2>5 Principles of Object-Oriented Programming</h2>
+            <h2>5 Principles of Object-Oriented Programming & Design Patterns</h2>
             <p>
-                Summary
+            <h3>Summary</h3>
             </p>
             <p>
-                This project has GitHub actions integrated into the code. There are two github work flows that are set
-                up in the project:
-                <br>dev.yml
-                <br>prod.yml
-                <br>When writing code on a branch, a user can commit and push their code into a github repository. The
-                Github repository will receive a pull request. The user must accept the pull request in Github. There
-                will be a test that runs to check if everything is correct. Once it the code is validated and confirmed
-                as correct, the pull request will be completed. Simultaneously, the code will be deployed into a Heroku
-                dummy app for testing. The user can then merge the pull request into the main branch if they wish. Once
-                the request is merged, the user can rebase the code onto the main branch in their local coding software.
-                Simultaneously, the code will be deployed into the final product application in Heroku.
+                SOLID are 5 design principles that encourage maintainable, understandable, and
+                flexible software. The 5 principle work well in conjunction with the 4 OOP fundamental concepts. You can
+                refer to
+                the following link for further information: https://www.baeldung.com/solid-principles
+                <br><br> <b>-- Single-Responsibility Principle:</b> A class should only have on responsibility and only
+                one reason to change. This allows for fewer test cases, fewer dependencies and well-organized classes.
+                <br> <b>-- Open-Closed Principle:</b> A class should be open for extension but closed for modification.
+                Doing so will prevent programmers from modifying existing code and creating new bugs.
+                <br> <b>-- Liskov Substitution Principle:</b> Functions that use pointers or reference to base classes
+                must be able to use objects of derived classes without knowing it. In other words, derived classes must
+                be substitutable for their base class.
+                <br> <b>-- Interface Segregation Principle:</b> Larger interfaces should be split into smaller ones.
+                This ensures that anything a user interacts with belongs only that class.
+                <br> <b>-- Dependency Inversion Principle:</b> Abstractions should not depend on details. Details should
+                depend on abstraction. High-level modules should not depend on low-level modules. Both should depend on
+                abstractions.
+            </p>
+            <p>
+            <h3>Calculator Example</h3>
+            In the following example, a calculator is created that has functions such as addition and subtraction.
+            It can also store the history of the calculations. The 5 principles of object-oriented programming
+            will be exhibited through the creation the calculator program.
+            </p>
+            <p>
+                <br><b>Single-Responsibility Principle</b>
+                <br>A calculator folder is created with two sub-folders named calculations and
+                operations. Each folder (Calculator, calculations and operations) has a python file in it.
+                <br><br>The folder calculator with the operations folder has a python file which creates an
+                addition operation class as shown in figure 1. In this class, there is a method specifically for
+                addition. The single responsibility of the method is to add value 1 and value 2. This is an example of
+                the Single-Responsibility Principle.
+
+                <br><br> <b>Open-Closed Principle</b>
+                <br> This principle is shown by Figure 4. This Calculation abstract class is open for extension. For
+                example, a division class can be added to the abstract class. However, it is close for modification. The
+                added class would not be able to modify the parent class methods.
+
+                <br><br> <b>Liskov Substitution Principle</b>
+                <br>The folder calculator with the calculations folder has a python file which imports the
+                data from the operations folder located in the calculator folder as shown in figure 2.
+                <br>Then the folder calculator with the calculations folder has a python file which creates an abstract
+                calculation base class. The base class creates a tuple list and stores all values from calculations made
+                when using the calculator. This can be known as the parent class. Figure 3 shows the code written for
+                this step.
+                <br>Next, there is an addition child class that is created which inherits the parent class's
+                attributes. This child class is created since it is specifically for addition. Figure 4 shows the
+                addition child class. It is evident that inheritance is show through these steps.
+                <br> This principle is very similar to the inheritance principle. The child class in this case is able
+                to use all the methods from the parent class without any issue.
+
+                <br><br> <b>Interface Segregation Principle</b>
+                <br> As mentioned previously, Figure 4 shows an addition class. When a user uses the calculator for
+                addition, they are using that specific interface. The addition class is only for addition. Below the
+                addition class in Figure 4 is a multiplication class. With that said, when a user is looking to use the
+                multiplication class, they are only using the multiplication interface. Every class has a specific
+                interface. They are multiple small interfaces in this program for optimal usage.
+
+                <br><br> <b>Dependency Inversion Principle</b>
+                <br> Figure 3 shows the abstract class that has been created (class Calculation). This class has a few
+                methods in it. More importantly, this abstraction has many details that depend on it. To elaborate,
+                Figure 5 shows the whole a whole calculator class with details (such as methods) that are dependent on
+                the Calculation abstraction class. As mentioned previously, the add class in figure 5 shows:
+                <br><br>calculation = Addition.create(tuple_list)
+                <br>return calculation.get_result() <-- this shows how the details of the add class are reliant on the
+                abstract calculation class.
+
+            <p>
+            <h3>Design Patterns </h3>
+            Design Patterns are essentially pre-made blueprints that a programmer
+            can customize to solve a design problem in code. They are concepts that can be implemented when
+            designing a program with code. There are three categories of design patterns, Creational patterns,
+            Structural patterns, and Behavioral patterns. You can refer to
+            the following link for further information: https://refactoring.guru/design-patterns/catalog
+            <br><br> <b>-- Creational Patterns:</b> Provide various object creation mechanisms. Good for increasing
+            flexibility and reusing existing code. Examples include, factory method and abstract factory.
+            <br> <b>-- Structural Patterns: </b> Explains how to assemble objects and classes into larger structures
+            while keeping structures flexible and efficient. Examples include adapter and bridge.
+            <br> <b>-- Behavioral Patterns: </b> Patterns concerned with algorithms and the assignment of
+            responsibilities between objects. Examples include command and iterator.
+            </p>
+
+            <b>Factory Pattern </b>
+            <br> The factory pattern is shown in this calculator. We see that there are multiple object mechanisms
+            created such as addition and multiplication as shown in Figure 4. These objects are used in different parts
+            of the code. The classes in Figure 4 are used and called out in the calculator class shown in Figure 5.
+            <br><br>
+
             </p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Pictures!</h2>
-            <p>
+            <br>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <b>Figure 1</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/calculator_operations.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 2</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig2aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 3</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig3aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
+            <br>
+            <br>
+
+            <div class="col">
+                <br><b>Figure 4</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig4oop.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col">
+                <br><b>Figure 5</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig5aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br> <br> <br> <br><br>
+
+
         </div>
     </div>
-
-
     </body>
     </html>
 

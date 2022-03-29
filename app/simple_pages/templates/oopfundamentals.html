@@ -1,88 +1,217 @@
 {% extends "base.html" %}
 {% block content %}
-        {% block head %}
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-            <title>This is {{ 'Yoshis' }} Website</title>
-        {% endblock %}
-        <style>
-            {
-                box-sizing: border-box
-            ;
-            }
-            /* Set additional styling options for the columns*/
-            .column {
-                float: left;
-                width: 50%;
-            }
+        <title>This is {{ 'Yoshis' }} Website</title>
+    {% endblock %}
+    <style>
+        {
+            box-sizing: border-box
+        ;
+        }
+        /* Set additional styling options for the columns*/
+        .column {
+            float: left;
+            width: 50%;
+        }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-        </style>
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
     </head>
     <body>
     <div class="row">
         <div class="column" style="background-color:#FFB695;">
             <h2>Object Oriented Programming Fundamentals</h2>
             <p>
-                Summary
+            <h3>Summary</h3>
             </p>
             <p>
-                This project has GitHub actions integrated into the code. There are two github work flows that are set
-                up in the project:
-                <br>dev.yml
-                <br>prod.yml
-                <br>When writing code on a branch, a user can commit and push their code into a github repository. The
-                Github repository will receive a pull request. The user must accept the pull request in Github. There
-                will be a test that runs to check if everything is correct. Once it the code is validated and confirmed
-                as correct, the pull request will be completed. Simultaneously, the code will be deployed into a Heroku
-                dummy app for testing. The user can then merge the pull request into the main branch if they wish. Once
-                the request is merged, the user can rebase the code onto the main branch in their local coding software.
-                Simultaneously, the code will be deployed into the final product application in Heroku.
+                The 4 fundamentals of object-oriented programming were discussed in the OOP Glossary. Below are the
+                definitions for encapsulation, inheritance, polymorphism, and abstraction.
+                <br><br><b>Encapsulation:</b> Occurs when each object keeps its state private and inside a class.
+                Objects can manage their own state via methods. No other class can touch the state unless it is
+                explicitly allowed. Public methods can be called by classes but they cannot modify the internal state.
+                For example, you can feed a cat (public method called), but you cannot modify how hungry (state is
+                hunger) a cat is. In essence, binding a private state and public state creates encapsulation. It
+                prevents accidental modification of data. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/encapsulation-in-python/
+                <br><br><b>Inheritance:</b> Allows a programmer to reuse common logic and extract the unique logic into
+                a separate class. First, a parent class is create which is a class to easily hold all common functions
+                and parameters that will be used in a child class. A child class is a class that inherits all
+                of the attributes and functions assigned to the parent class. Each class adds only what is necessary for
+                it while reusing common logic with the parent class. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/inheritance-in-python/ The
+                benefits of inheritance are:
+                <br>-- Good real world representations
+                <br>-- Provides reusability of the code
+                <br>-- Transitive in nature
+                <br><br><b>Polymorphism:</b> Allows a programmer to use a collection of child classes and parent class
+                methods. A coder can use a method that is implemented for a parent class inside a child class.A coder
+                can use a class exactly like its parent so there is no confusion with mixing type. Each child class
+                keeps its own methods as they are. This is done by defining a parent interface that can be reused. The
+                parent interface has multiple common methods and each child class implements its own version of said
+                common method. In other words, the same function name (but different signatures) can be used for
+                different types. Polymorphism can be used in class methods, Inheritance, and with functions and objects.
+                You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/polymorphism-in-python/
+                <br><br><b>Abstraction:</b> Helps the maintenance of large programs that have many separate objects in
+                constant communication. Each object must only expose a high-level mechanism for using it. The mechanism
+                must hide internal implementation details and only reveal operations relevant for other objects. For
+                examples, a phone allows a user to click buttons for an output, but it does not demonstrate the process
+                of retrieving the output to the user. In terms of coding, a public method should be accessed by any
+                class. That class does not care or know how the method works. You can refer to
+                the following link for further information: https://www.geeksforgeeks.org/abstract-classes-in-python/
+            </p>
+            <p>
+            <h3>Calculator Example</h3>
+            </p>
+            <p>
+                In the following example, a calculator is created that has functions such as addition and subtraction.
+                It can also store the history of the calculations. The four fundamentals of object-oriented programming
+                will be exhibited through the creation the calculator program.
+                <br><br> <b>Encapsulation</b>
+                <br>A calculator folder is created with two sub-folders named calculations and
+                operations. Each folder (Calculator, calculations and operations) has a python file in it.
+                <br><br>The folder calculator with the operations folder has a python file which creates an
+                addition operation class as shown in figure 1.
+                A class itself is an example of what encapsulation is. The class is essentially a blueprint
+                for objects. In this case, the addition class holds a private state via method which shows the code:
+                <br><br>def add(value_1, value_2):
+                <br>""" This is the add method"""
+                <br>return value_1 + value_2
+                <br><br>Other classes can call this addition class but they cannot modify the private state (code shown
+                above). As noted previously, this prevents accidental modification of data.
+
+                <br><br> <b>Inheritance</b>
+                <br>The folder calculator with the calculations folder has a python file which imports the
+                data from the operations folder located in the calculator folder as shown in figure 2.
+                <br>Then the folder calculator with the calculations folder has a python file which creates an abstract
+                calculation base class. The base class creates a tuple list and stores all values from calculations made
+                when using the calculator. This can be known as the parent class. Figure 3 shows the code written for
+                this step.
+                <br>Next, there is an addition child class that is created which inherits the parent class's
+                attributes. This child class is created since it is specifically for addition. Figure 4 shows the
+                addition child class. It is evident that inheritance is show through these steps.
+
+                <br><br> <b>Polymorphism</b>
+                <br> A calculator class must be created in a python file under the calculator folder. The
+                calculator class imports the calculation folder which is located in the calculator folder and uses that
+                information to create the calculator class. Figure 5 shows this code.
+                <br> Under the "class Calculator:" there is a method called add. This method calls out the Addition
+                class and the calculation class mentioned previously. The Addition and calculation class are a mixture
+                of parent, child and regular classes. However, under the add method, the calculation class is modified
+                into its own signature. As shown, the add methods states:
+                <br><br>calculation = Addition.create(tuple_list)
+                <br>return calculation.get_result()
+                <br><br>The code shows the parent class "calculation" modified by its child class "Addition" by changing
+                the calculation signature to calculation = Addition.create(tuple_list).
+
+                <br><br> <b>Abstraction</b>
+                <br> Next, a class is created to test the code. A "tests" folder is created with a python file named
+                "calculator_test.py" The class is supposed to call the addition class which tests the addition portion
+                of the calculator. Figure 6 shows this code. Next step the addition test class is executed
+                and provides the user with a result of the test. Once the code is complete, a user can just click the
+                green play button next to the "test_calculator_add_method()". This will allow a user to run a test. The
+                process of the test will not be shown. Figure 7 shows the results of the add test class. This test
+                passed.
             </p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Pictures!</h2>
-            <p>
+            <br>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <b>Figure 1</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/calculator_operations.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 2</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig2aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
-            <p>
-                .
-            </p>
-            <p>
+            <br>
+            <br>
+
+
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/github_banner.png') }}" class="card-img-top" alt="...">
+                <br><b>Figure 3</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig3aaa.png') }}" class="card-img-top"
+                         alt="...">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            </p>
+            <br>
+            <br>
+
+            <div class="col">
+                <br><b>Figure 4</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig4aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col">
+                <br><b>Figure 5</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig5aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="col">
+                <br><b>Figure 6</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig6aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="col">
+                <br><b>Figure 7</b>
+                <div class="card" style="width: 35rem; height: 15rem">
+                    <img src="{{ url_for('static', filename='images/fig7aaa.png') }}" class="card-img-top"
+                         alt="...">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <br> <br> <br> <br>
+
+
         </div>
     </div>
-
-
     </body>
     </html>
 
