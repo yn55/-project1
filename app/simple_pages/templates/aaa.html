@@ -54,20 +54,20 @@
                 <br><br> <b>Arrange</b>
                 <br>A calculator folder is created with two subfolders named calculations and
                 operations. Each folder (Calculator, calculations and operations) has a python file in it.
-                <br>-- First, the calculator.operations python file creates an addition operation class as shown in
-                figure 1.
-                <br>-- Second, the calculator.calculations python file imports the data from the calculator.operations
-                folder
-                as shown in figure 2.
-                <br>-- Third, the calculator.calculations creates an abstract calculation base class which creates a
+                <br>-- First, the folder calculator with the operations folder has a python file creates an addition
+                operation class as shown in figure 1.
+                <br>-- Second, the folder calculator with the calculations folder has a python file which imports the
+                data from the operations folder located in the calculator folder as shown in figure 2.
+                <br>-- Third, the folder calculator with the calculations folder has a python file which creates an
+                abstract calculation base class which creates a
                 tuple list and stores all values from calculations made when using the calculator. This can be known as
                 the parent class. Figure 3 shows the code written for this step.
                 <br>-- Fourth, there is an addition child class that is created which inherits the parent class's
                 attributes. This child class is created since it is specifically for addition.
                 Figure 4 shows the addition child class.
                 <br>-- Fifth, the calculator class must be created in a python file under the calculator folder. The
-                calculator class imports the calculator.calculations folder and uses that information to create the
-                calculator class. Figure 5 shows this code.
+                calculator class imports the calculation folder which is located in the calculator folder and uses that
+                information to create the calculator class. Figure 5 shows this code.
                 <br><br> <b>Act</b>
                 <br> This step creates the class to test the code. A "tests" folder is created with a python file named
                 "calculator_test.py" The class is supposed to call the addition class
